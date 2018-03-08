@@ -15,6 +15,7 @@ export default {
     return {
       listData:'dasdds',
       red:'red',
+      red2:'red',
     };
   },
 
