@@ -1,26 +1,33 @@
 <template>
-  <div>{{listData}}</div>
+  <el-container>
+    <el-header>
+      <header-component/>
+    </el-header>
+    <el-main></el-main>
+    <el-footer></el-footer>
+  </el-container>
 </template>
 
 <script>
+import headerComponent from './header';
 export default {
   data () {
     return {
       listData:'dasdds',
+      red:'red'
     };
   },
 
-  components: {},
+  components: {
+    headerComponent,
+  },
 
-  computed: {},
+  // computed: {},
 
-  mounted: {},
+  // mounted: {},
 
-  methods: {
-    handleClick () {
-      alert(2);
-    }
-  }
+  // methods: {
+  // }
 }
 
 </script>
