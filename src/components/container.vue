@@ -14,7 +14,7 @@ export default {
   data () {
     return {
       listData:'dasdds',
-      red:'red'
+      red:'red',
     };
   },
 
