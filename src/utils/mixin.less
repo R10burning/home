@@ -1,0 +1,14 @@
+@themeColor:#238BE9;
+/*下边框函数*/
+.border-bottom-some-px(@width:1px,@lineType:solid,@color:@themeColor){
+  position: relative;
+    &:after{
+      content: '';
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      display: block;
+      width: 100%;
+      border-top: @width @lineType @color;
+    }
+}
