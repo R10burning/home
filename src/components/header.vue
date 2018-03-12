@@ -3,15 +3,25 @@
       <el-col :sm="4" class="brand">
         <img :src="imgUrl" alt="logo">
       </el-col>
-      <el-col :sm="16" tag='ul' class="title">
+      <el-col :sm="12" tag='ul' class="title hidden-md-and-down">
         <li v-for="(title,index) in titleData" :key="index" :class="{active:title.active}" @click='beActive(index)'>
           <a href="javascript:" class="title-item">{{title.titleName}}</a>
         </li>
       </el-col>
-      <el-col :sm="4"><div></div></el-col>
+      <el-col :sm="8" tag="ul" class="date-weather">
+        <li>
+          <i class="el-icon-date"></i>
+        </li>
+        <li>
+          <span class="date">{{nowDate}}</span>
+          <span>管理员</span>
+        </li>
+      </el-col>
     </el-row>
 </template>
 <script>
+import moment from 'moment';
+import momentLocale from 'moment/locale/zh-cn';
 export default {
   data () {
     return {
@@ -41,7 +51,8 @@ export default {
           titleName:'个人中心',
           active:false
         }
-      ]
+      ],
+      nowDate:''
     };
   },
 
@@ -49,6 +60,11 @@ export default {
   // computed: {},
   
   mounted () {
+    this.getNowDate();
+  },
+
+  destroyed () {
+    clearInterval(this.timer);
   },
 
   methods: {
@@ -60,6 +76,11 @@ export default {
           item.active = false;
         }
       })
+    },
+    getNowDate () {
+      this.timer = setInterval(()=>{
+        this.nowDate = moment().format('LLLL');
+      },500)
     }
   }
 }
@@ -101,6 +122,15 @@ export default {
       height:100%;
       & > div{
         height:100%;
+      }
+    }
+    .date-weather {
+      display: flex;
+      align-items: center;
+      justify-content:flex-end;
+      .el-icon-date{
+        font-size: 18px;
+         margin-right: 10px;
       }
     }
   }

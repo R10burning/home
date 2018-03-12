@@ -4,6 +4,7 @@ import VueResource from 'vue-resource';
 import Container from './components/container.vue';
 import ElementUI from 'element-ui';
 import 'element-ui/lib/theme-chalk/index.css';
+import 'element-ui/lib/theme-chalk/display.css';
                                                                                                                                                                                                                                                                                                  
 Vue.config.productionTip = false;
 Vue.use(VueRouter);

@@ -23,7 +23,10 @@ time, mark, audio, video, input {
     vertical-align: baseline;
     font-family:SimHei,Arial, Helvetica, sans-serif
 }
-
+html{
+    color:#000;
+    font-size: 14px;
+}
 /* HTML5 display-role reset for older browsers */
 article, aside, details, figcaption, figure,
 footer, header, menu, nav, section {
@@ -50,7 +53,7 @@ table {
 
 /* custom */
 a {
-    color: #7e8c8d;
+    color: #000;
     text-decoration: none;
     -webkit-backface-visibility: hidden;
 }
