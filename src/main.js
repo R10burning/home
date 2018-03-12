@@ -14,7 +14,7 @@ Vue.use(ElementUI);
 // const router = new VueRouter({
 //   routes:[
 //     {
-      
+
 //     }
 //   ]
 // });
@@ -22,6 +22,9 @@ Vue.use(ElementUI);
 new Vue({
   el: '#app',
   // router,
-  components: { Container },
+  components: {
+    Container
+  },
   template: '<Container/>'
 })
+
