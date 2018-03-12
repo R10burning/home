@@ -52,7 +52,7 @@ export default {
           active:false
         }
       ],
-      nowDate:''
+      nowDate: moment().format('LLLL')
     };
   },
 
@@ -80,7 +80,7 @@ export default {
     getNowDate () {
       this.timer = setInterval(()=>{
         this.nowDate = moment().format('LLLL');
-      },500)
+      },60000)
     }
   }
 }
